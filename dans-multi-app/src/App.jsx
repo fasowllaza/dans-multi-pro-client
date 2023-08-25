@@ -7,9 +7,10 @@ import {
   Link
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from "./store/index";
+import store from "./store";
 import Login from './pages/Login';
 import Recruitment from './pages/Recruitment';
+import RecruitmentDetail from './pages/RecruitmentDetail';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Router>
         <Route exact path="/" component={ Login }/>
         <Route exact path="/recruitment" component={Recruitment} />
-        <Route exact path="/recruitment/:id" component={Recruitment} />
+        <Route exact path="/recruitment/:id" component={RecruitmentDetail} />
         <Route exact path="/register" component={Login} />
       </Router>
     </Provider>
